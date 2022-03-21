@@ -1,9 +1,13 @@
-var express = require('express');
-var router = express.Router();
+const newsRouter = require('./news')
+const siteRouter = require('./site')
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+function route(app){
 
-module.exports = router;
+  app.use('/news',newsRouter)
+
+  app.use('/search',siteRouter) 
+
+  app.use('/',siteRouter)
+}
+
+module.exports = route;
