@@ -1,7 +1,13 @@
+const Course = require('../model/Coures')
+
 class SiteController{
-    //[GET] / news
-    index(req,res){
-        res.render('index')
+    //[GET] / 
+    index(req,res,next){
+        Course.find({})
+            .then(courses => res.render('index',{courses}))
+            .catch(next)       
+
+        // res.render('index')
     }
     //[GET] /news/:slug
     search(req,res){

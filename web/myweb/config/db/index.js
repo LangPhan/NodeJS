@@ -1,9 +1,7 @@
 const mongoose = require('mongoose')
 async function connect() {
     try{
-        await mongoose.connect('mongodb+srv://lang_DB:<Xh8UAFhAypOsUvC0>@cluster0.yqu0o.mongodb.net/fisrt_project?retryWrites=true&w=majority',{
-            useNewUrlParser: true,
-            useUnifiedTophology: true
+        await mongoose.connect('mongodb://localhost:27017/ex_edu_dev',{
         });
         console.log('Good')
     }catch(error){
