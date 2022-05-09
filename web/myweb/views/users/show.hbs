@@ -1,0 +1,17 @@
+<div class="mt-4">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Thong tin nguoi dung</h1>
+        </div>
+        {{#each users}}
+        <div class="col-lg-9">
+            <h2>Ho va ten: {{this.fullName}}</h2>
+            <p>Email: {{this.email}}</p>
+            <p>So dien thoai: {{this.phoneNum}}</p>
+            <p>Ngay sinh: {{this.birthday }}</p>
+            <p>So du: {{this.wallet}}</p>
+            <p>Trang thai tai khoan: {{this.status}}</p>
+        </div>
+        {{/each}}
+    </div>
+</div>
